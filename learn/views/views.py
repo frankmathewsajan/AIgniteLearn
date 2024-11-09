@@ -1,8 +1,14 @@
+import base64
+import io
 import json
+import random
 
+import numpy as np
+from PIL import Image
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
 from learn.forms import ProfileForm
 from learn.models import Profile
@@ -13,6 +19,12 @@ def index(request):
         return render(request, "learn/index.html")
     else:
         return redirect('login')
+
+
+@csrf_exempt
+def analysis(request):
+    return render(request, "learn/analysis.html")
+
 
 @login_required
 def setup(request):
@@ -67,6 +79,7 @@ def setup(request):
 
     })
 
+
 @login_required
 def profile(request):
     user_profile, created = Profile.objects.get_or_create(user=request.user)
@@ -84,3 +97,34 @@ def profile(request):
         'form': form,
     }
     return render(request, 'learn/user/profile.html', context)
+
+
+@csrf_exempt
+def process_frame(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON payload from request.body
+            body = json.loads(request.body)
+            frame_data = body['frame'].split(',')[1]  # Extract Base64 data after the header
+
+            # Decode the Base64 image
+            img_data = base64.b64decode(frame_data)
+            img = Image.open(io.BytesIO(img_data))  # Create PIL Image from decoded data
+            img = np.array(img)  # Convert to NumPy array for ML processing
+
+            # Run ML model (replace with your model's code)
+            result = run_ml_model(img)
+
+            # Return the result as JSON
+            return JsonResponse({'result': result})
+
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+
+    return JsonResponse({'error': 'Invalid request'}, status=400)
+
+
+def run_ml_model(frame):
+    # Placeholder for ML model processing
+
+    return random.choice(range(100))

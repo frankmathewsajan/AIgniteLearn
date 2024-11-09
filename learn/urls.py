@@ -1,7 +1,5 @@
-from django.conf.urls.static import static
 from django.urls import path
 
-from AIgniteLearn import settings
 from .views import views, auth, courses
 
 urlpatterns = [
@@ -15,6 +13,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('courses/<str:lesson>', courses.courses, name='courses'),
     path('courses/<str:lesson>/<str:id>', courses.courses, name='courses'),
+    path('process-frame/', views.process_frame, name='process_frame'),
+    path('analysis', views.analysis, name='analysis')
 
 ]
-

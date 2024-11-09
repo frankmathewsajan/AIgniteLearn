@@ -1,0 +1,32 @@
+{% extends "learn/auth/layout.html" %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block form %}
+    <form action='{% url "register" %}' method='POST'>
+        {% csrf_token %}
+        <div class="section text-center">
+            <h4 class="mb-4 pb-3">Register</h4>
+            <div class="form-group mt-2">
+                <input type="text" name="username" class="form-style" placeholder="Your Username" id="username"
+                       autocomplete="on" required aria-label="Username">
+                <i class="input-icon uil uil-at"></i>
+            </div>
+
+            <div class="form-group mt-2">
+                <input type="password" name="password" class="form-style" placeholder="Your Password" id="password"
+                       autocomplete="on" required aria-label="Password">
+                <i class="input-icon uil uil-lock"></i>
+            </div>
+            <div class="form-group mt-2">
+                <input type="password" name="confirmation" class="form-style" placeholder="Confirm Password"
+                       id="confirmation"
+                       autocomplete="on" required aria-label="Password">
+                <i class="input-icon uil uil-lock-alt"></i>
+            </div>
+            <p style="padding-top: 8px">Already Registered? <a style="text-decoration: underline;color: beige;"
+                                                           href="{% url 'login' %}">Login</a></p>
+
+            <button type='submit' class="btn mt-2">Register</button>
+        </div>
+    </form>
+{% endblock %}

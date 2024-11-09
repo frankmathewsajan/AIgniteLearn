@@ -1,0 +1,167 @@
+{% extends "learn/layout.html" %}
+{% load static %}
+{% block title %}PACE Probe{% endblock %}
+{% block styles %}
+    <style>
+        .card {
+            border: 1px solid #f0a465;
+            background-color: #fef4eb;
+            text-align: center;
+            padding: 20px;
+            height: 25vh;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Ensures smooth hover transition */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Zoom effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+        }
+
+        .card h5 {
+            color: #ff6f00;
+        }
+
+        .card-body {
+            color: #7a7a7a;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- NASA Logo as Navbar Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'learn/imgs/NASA_logo.svg' %}" alt="NASA Logo" width="45" height="45"
+                     class="d-inline-block align-text-top">
+                <img src="{% static 'learn/imgs/PACE_Mission_Logo.png' %}" alt="PACE Logo" width="45" height="45"
+                     class="d-inline-block align-text-top">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Search Bar -->
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-start">Main Courses</h1>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <!-- Beginner Level -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{% url 'courses' 'beginner' %}" style="text-decoration: none">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Introduction to Ocean and Climate Data</h5>
+                                <p class="card-text">Beginner Level</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Intermediate Level -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{% url 'courses' 'intermediate' %}" style="text-decoration: none">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Understanding PACE Data: Aerosols & Ocean Color</h5>
+                                <p class="card-text">Intermediate Level</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Advanced Level -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{% url 'courses' 'advanced' %}" style="text-decoration: none">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Data Analysis and Visualization with PACE Tools</h5>
+                                <p class="card-text">Advanced Level</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-start">PACE Ecosystem</h1>
+                </div>
+            </div>
+            <div class="row mt-2">
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">PLANKTON</h5>
+                            <p class="card-text">Beginner Level</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">AEROSOL</h5>
+                            <p class="card-text">Intermediate Level</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CLOUD</h5>
+                            <p class="card-text">Advanced Level</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">OCEAN</h5>
+                            <p class="card-text">Advanced Level</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/35c881c056.js" crossorigin="anonymous"></script>
+{% endblock %}

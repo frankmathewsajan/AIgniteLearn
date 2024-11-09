@@ -1,0 +1,191 @@
+<!-- templates/profile.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'learn/imgs/favicon.png' %}" >
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'learn/css/profile.css' %}">
+    <style>
+
+
+        .edit-form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .edit-form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edit-form-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .edit-form-container input,
+        .edit-form-container textarea,
+        .edit-form-container select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .edit-form-container button {
+            padding: 10px;
+            background-color: #FFB300;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-form-container button:hover {
+            background-color: #e0a800;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Pill Buttons for Interests and Goals */
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .pill {
+            background-color: #FFB300;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: default;
+            transition: background-color 0.3s ease;
+        }
+
+        .pill:hover {
+            background-color: #e0a800;
+        }
+
+        /* Section Styling */
+        .profile-section {
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+
+        .profile-section h3 {
+            margin-bottom: 10px;
+            color: #333333;
+            border-bottom: 2px dashed #EEEEEE;
+            padding-bottom: 5px;
+        }
+
+
+        h2 {
+            color: #4a2c91; /* Dark purple for headings */
+        }
+
+
+    </style>
+</head>
+<body>
+<aside class="profile-card">
+    <header style="display: flex; justify-content: flex-start; align-items: flex-start; margin-top: 4px !important;gap: 20px;">
+        <div>
+            <a href="/">
+                <img src="{{ user.profile.avatar.url }}" alt="{{ user.username }}'s avatar"
+                     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+            </a>
+            <h1 style="margin-top: 10px;">{{ user.first_name }} {{ user.last_name }}</h1>
+        </div>
+        <div class="profile-section"
+             style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start !important; gap: 8px;">
+            <h3 style="margin-bottom: 10px;">Personal Information</h3>
+            <p style="margin: 0;"><strong>Username:</strong> {{ user.username }}</p>
+            <p style="margin: 0;"><strong>Email:</strong> {{ user.profile.email }}</p>
+            <p style="margin: 0;"><strong>Age:</strong> {{ user.profile.age }}</p>
+            <p style="margin: 0;"><strong>Education Level:</strong> {{ user.profile.education_level }}</p>
+        </div>
+        <div class="profile-section" style="max-width: 400px; margin-left: 20px;">
+            <h3>Bio</h3>
+            <p>{{ user.profile.bio|default:"No info yet buddy!" }}</p>
+        </div>
+    </header>
+
+
+    <!-- Profile Details Sections -->
+    <div class="profile-details">
+
+        <!-- Interests Section -->
+        <div class="profile-section" style="display: flex; justify-content: space-around">
+            <div>
+                <h3>Interests</h3>
+                <div class="pill-container">
+                    {% for interest in user.profile.interests %}
+                        <button class="pill">{{ interest }}</button>
+                    {% empty %}
+                        <p>No interests listed.</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <h3>Goals</h3>
+                <div class="pill-container">
+                    {% for goal in user.profile.goals %}
+                        <button class="pill">{{ goal }}</button>
+                    {% empty %}
+                        <p>No goals listed.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Button -->
+    <a id="editProfileBtn" class="edit-profile-button" style="float: right;margin-right: 2pc;" href="{% url 'setup' %}">Edit
+        Profile</a>
+    <a class="edit-profile-button" style="float: right;margin-right: 1pc;background-color: grey !important;" href="{% url 'index' %}">Home</a>
+</aside>
+
+
+<!-- JavaScript for Toggling Edit Form -->
+<script>
+    const editBtn = document.getElementById('editProfileBtn');
+    const modal = document.getElementById('editFormModal');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    editBtn.addEventListener('click', function () {
+        modal.classList.add('show');
+    });
+
+    closeModalBtn.addEventListener('click', function () {
+        modal.classList.remove('show');
+    });
+
+    // Close modal when clicking outside the form container
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Neural Network Background</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen setup */
+        body, html {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Canvas styling */
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Demo content */
+        .content {
+            position: relative;
+            color: #ffffff;
+            z-index: 1;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /* Button styling */
+        .btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #6a89cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #4b66a3;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<div class="content">
+    <h1>Welcome to <b>AIgnite</b></h1><br>
+    <h4>"Click, learn, grow — let’s begin the show!"</h4>
+
+    <!-- Button -->
+    <button class="btn" onclick="startJourney()">Let's Begin</button>
+</div>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const particleCount = 100;
+    const maxDistance = 150; // Max distance for connecting lines
+
+    // Resize canvas to fill the window
+    function resizeCanvas() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Particle class representing each point in the network
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.speedX = (Math.random() - 0.5) * 1.5;
+            this.speedY = (Math.random() - 0.5) * 1.5;
+            this.size = 2;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > width) this.speedX *= -1;
+            if (this.y < 0 || this.y > height) this.speedY *= -1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = "#6a89cc";
+            ctx.fill();
+        }
+    }
+
+    // Create particles
+    function initParticles() {
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+    initParticles();
+
+    // Cursor interaction
+    const cursor = { x: null, y: null };
+    window.addEventListener('mousemove', (e) => {
+        cursor.x = e.x;
+        cursor.y = e.y;
+    });
+
+    // Draw lines between close particles and to the cursor
+    function connectParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < maxDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / maxDistance})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+            // Line to cursor if close
+            if (cursor.x && cursor.y) {
+                const dx = particles[i].x - cursor.x;
+                const dy = particles[i].y - cursor.y;
+                const cursorDistance = Math.sqrt(dx * dx + dy * dy);
+                if (cursorDistance < maxDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(cursor.x, cursor.y);
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${1 - cursorDistance / maxDistance})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        connectParticles();
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Function to handle button click
+    function startJourney() {
+        location.href = '{% url 'home' %}'
+        // You can add other actions here, like navigating to a new page, etc.
+    }
+</script>
+
+</body>
+</html>

@@ -6,6 +6,7 @@ from django.db import IntegrityError
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.utils.crypto import get_random_string
 
 from learn.models import Profile
 
@@ -14,9 +15,9 @@ def login(request):
     if request.method == "POST":
 
         # Attempt to sign user in
-        username = request.POST["username"]
+        email = request.POST["email"]
         password = request.POST["password"]
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, email=email, password=password)
 
         # Check if authentication successful
         if user is not None:
@@ -31,11 +32,26 @@ def login(request):
         return render(request, "learn/auth/login.html") if request.user.is_anonymous else redirect('index')
 
 
+def generate_unique_username(user_name, existing_usernames):
+    # Convert user_name to lowercase and replace spaces with underscores
+    username = user_name.lower().replace(" ", "_")
+
+    # Check if the username is unique
+    while username in existing_usernames:
+        # Append a random 4-digit number to the username
+        username = f"{username}_{get_random_string(4, '0123456789')}"
+
+    return username
 def register(request):
     if request.method == "POST":
-        username = request.POST["username"]
+        user_name = request.POST["user_name"]
+        email = request.POST["email"]
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
+
+        user_name = request.POST["user_name"]
+        existing_usernames = set(User.objects.values_list("username", flat=True))  # Fetch existing usernames
+        unique_username = generate_unique_username(user_name, existing_usernames)
 
         if password != confirmation:
             return render(request, "learn/auth/register.html", {
@@ -44,8 +60,8 @@ def register(request):
 
         # Attempt to create new user
         try:
-            user = User.objects.create_user(username=username, password=password)
-            profile = Profile(user=user)
+            user = User.objects.create_user(email=email, password=password, username=unique_username)
+            profile = Profile(user=user, first_name=user_name)
             user.save()
             profile.save()
         except IntegrityError as e:
@@ -54,7 +70,7 @@ def register(request):
                 "message": "Username already taken."
             })
         user_login(request, user)
-        return HttpResponseRedirect(reverse("setup"))
+        return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "learn/auth/register.html") if request.user.is_anonymous else redirect('index')
 

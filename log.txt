@@ -1,0 +1,1156 @@
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:23] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:24] Mouth Open Detected
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:26] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:27] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:28] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:29] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:30] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:31] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:32] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:33] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:33] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:33] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:33] Eye Gaze Detected: Looking Right
+[2024-11-10 01:42:33] Eye Gaze Detected: Looking Right
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:09] Mouth Open Detected
+[2024-11-10 01:52:10] Mouth Open Detected
+[2024-11-10 01:52:10] Mouth Open Detected
+[2024-11-10 01:52:10] Mouth Open Detected
+[2024-11-10 01:52:10] Mouth Open Detected
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Head Turn Detected: Left Turn
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:10] Eye Gaze Detected: Looking Left
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:52:11] Head Turn Detected: Right Turn
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:31] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:32] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:33] Mouth Open Detected
+[2024-11-10 01:53:49] Mouth Open Detected
+[2024-11-10 01:53:49] Mouth Open Detected
+[2024-11-10 01:53:50] Mouth Open Detected
+[2024-11-10 01:53:56] Mouth Open Detected
+[2024-11-10 01:53:56] Mouth Open Detected
+[2024-11-10 01:54:04] Mouth Open Detected
+[2024-11-10 01:54:04] Mouth Open Detected
+[2024-11-10 01:54:04] Mouth Open Detected
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:34] Head Turn Detected: Right Turn
+[2024-11-10 01:54:34] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:35] Head Turn Detected: Right Turn
+[2024-11-10 01:54:35] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:36] Head Turn Detected: Right Turn
+[2024-11-10 01:54:36] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:37] Head Turn Detected: Right Turn
+[2024-11-10 01:54:37] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:38] Head Turn Detected: Right Turn
+[2024-11-10 01:54:38] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:51] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Mouth Open Detected
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:52] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:53] Head Turn Detected: Right Turn
+[2024-11-10 01:54:53] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:53] Mouth Open Detected
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Eye Gaze Detected: Looking Left
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Mouth Open Detected
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:54] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:55] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:56] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Head Turn Detected: Right Turn
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:58] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Mouth Open Detected
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:54:59] Head Turn Detected: Right Turn
+[2024-11-10 01:55:00] Mouth Open Detected
+[2024-11-10 01:55:00] Mouth Open Detected
+[2024-11-10 01:55:00] Mouth Open Detected
+[2024-11-10 01:55:00] Mouth Open Detected
+[2024-11-10 01:55:00] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:55:01] Mouth Open Detected
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:44] Head Turn Detected: Right Turn
+[2024-11-10 01:56:44] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:45] Head Turn Detected: Right Turn
+[2024-11-10 01:56:45] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:46] Head Turn Detected: Right Turn
+[2024-11-10 01:56:46] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Mouth Open Detected
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:47] Head Turn Detected: Right Turn
+[2024-11-10 01:56:47] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:48] Head Turn Detected: Right Turn
+[2024-11-10 01:56:48] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:49] Head Turn Detected: Right Turn
+[2024-11-10 01:56:49] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:49] Mouth Open Detected
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Mouth Open Detected
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Mouth Open Detected
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left
+[2024-11-10 01:56:50] Head Turn Detected: Right Turn
+[2024-11-10 01:56:50] Eye Gaze Detected: Looking Left

@@ -1,7 +1,10 @@
 import base64
 import io
 import json
+import os
 import random
+import re
+import subprocess
 
 import numpy as np
 from PIL import Image
@@ -11,14 +14,101 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
 from learn.forms import ProfileForm
-from learn.models import Profile
+from learn.models import Profile, Question
+
+
+def sort_log(log_data):
+    log_entries = re.findall(r"\[(.*?)\] (.+)", log_data)
+
+    # Group by message
+    grouped_logs = {}
+    for timestamp, message in log_entries:
+        if message not in grouped_logs:
+            grouped_logs[message] = []
+        grouped_logs[message].append(timestamp)
+
+    # Summarize
+    summary = []
+    for message, timestamps in grouped_logs.items():
+        start_time = timestamps[0]
+        end_time = timestamps[-1]
+        count = len(timestamps)
+        summary.append(f"{message}\n  Count: {count}\n  Time Range: {start_time} to {end_time}")
+
+    # Output the summary
+    return "\n\n".join(summary)
+
+
+def exam(request):
+    print(10)
+    if request.method == 'POST':
+        try:
+            log_file_path = r"C:\Users\MagnumOpus\PycharmProjects\AIgniteLearn\log.txt"
+            with open(log_file_path, "r") as log_file:
+                # Process the log file to get the summary
+                summary = sort_log(log_file.read())
+
+            return render(request, 'learn/log.html', {'summary': summary})
+        except Exception as e:
+            print(f"Error processing log file: {e}")
+            return render(request, 'learn/log.html', {'summary': [], 'error': 'Failed to process log file.'})
+
+    # Path to the face.py script
+    face_script_path = os.path.join(os.path.dirname(__file__), 'face.py')
+
+    # Path to the virtual environment's Python interpreter
+    venv_python_path = r"C:\Users\MagnumOpus\PycharmProjects\AIgniteLearn\.venv\Scripts\python.exe"
+
+    try:
+        # Execute the face.py script using the virtual environment
+        process = subprocess.Popen(
+            [venv_python_path, face_script_path],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+
+        print("Proctoring tool launched successfully.")
+        if stdout:
+            print("STDOUT:", stdout.decode())
+        if stderr:
+            print("STDERR:", stderr.decode())
+    except Exception as e:
+        print(f"Error launching proctoring tool: {e}")
+
+    # Retrieve all questions for the exam
+    try:
+        questions = Question.objects.all()
+    except Exception as e:
+        print(f"Error retrieving questions: {e}")
+        questions = []
+
+    return render(request, 'learn/exam.html', {'questions': questions})
 
 
 def index(request):
     if request.user.is_authenticated:
         return render(request, "learn/index.html")
     else:
-        return redirect('login')
+        return redirect('welcome')
+
+
+def welcome(request):
+    return render(request, "learn/welcome.html")
+
+
+def home(request):
+    return render(request, "learn/home.html")
+
+
+def about(request):
+    if request.user.is_authenticated:
+        return render(request, "learn/about.html")
+
+
+def contact(request):
+    if request.user.is_authenticated:
+        return render(request, "learn/contact.html")
 
 
 @csrf_exempt

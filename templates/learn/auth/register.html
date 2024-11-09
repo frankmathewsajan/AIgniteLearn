@@ -1,32 +1,205 @@
-{% extends "learn/auth/layout.html" %}
-{% load static %}
-{% block title %}Register{% endblock %}
-{% block form %}
-    <form action='{% url "register" %}' method='POST'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIgnite - Sign Up</title>
+    <style>
+        /* Root colors and styling */
+        :root {
+            --primary-color: #0E003D;
+            --accent-color: #FC6DAB;
+            --background-light: #F3FAE1;
+            --text-color: #333;
+        }
+
+        /* Basic styling */
+        body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: var(--background-light);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container for signup box */
+        .container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 1.2s ease;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            animation: slideDown 1s ease;
+        }
+
+        p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Input styling */
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.7rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(252, 109, 171, 0.5);
+        }
+
+        /* Button styling */
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(252, 109, 171, 0.5);
+        }
+
+        /* Checkbox container */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .checkbox-container input {
+            margin-right: 0.5rem;
+            transform: scale(1.2);
+        }
+
+        /* Guidelines popup */
+        .guidelines {
+            color: var(--accent-color);
+            cursor: pointer;
+            position: relative;
+            margin-left: 0.3rem;
+        }
+
+        .guidelines-popup {
+            display: none;
+            position: absolute;
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 150px;
+            overflow-y: scroll;
+            text-align: left;
+            font-size: 0.85rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Show guidelines popup on hover */
+        .guidelines:hover .guidelines-popup {
+            display: block;
+        }
+
+        /* Link to login page */
+        .login-link {
+            margin-top: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .login-link a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .login-link a:hover {
+            color: #ff9dc2;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Create an Account</h1>
+    <p>Join AIgnite today and start learning with us!</p>
+    
+    <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
-        <div class="section text-center">
-            <h4 class="mb-4 pb-3">Register</h4>
-            <div class="form-group mt-2">
-                <input type="text" name="username" class="form-style" placeholder="Your Username" id="username"
-                       autocomplete="on" required aria-label="Username">
-                <i class="input-icon uil uil-at"></i>
-            </div>
-
-            <div class="form-group mt-2">
-                <input type="password" name="password" class="form-style" placeholder="Your Password" id="password"
-                       autocomplete="on" required aria-label="Password">
-                <i class="input-icon uil uil-lock"></i>
-            </div>
-            <div class="form-group mt-2">
-                <input type="password" name="confirmation" class="form-style" placeholder="Confirm Password"
-                       id="confirmation"
-                       autocomplete="on" required aria-label="Password">
-                <i class="input-icon uil uil-lock-alt"></i>
-            </div>
-            <p style="padding-top: 8px">Already Registered? <a style="text-decoration: underline;color: beige;"
-                                                           href="{% url 'login' %}">Login</a></p>
-
-            <button type='submit' class="btn mt-2">Register</button>
+        <input type="text" name="user_name" placeholder="Name" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="password" name="confirmation" placeholder="Confirm Password" required><br>
+        
+        <!-- Checkbox with guidelines popup -->
+        <div class="checkbox-container">
+            <input type="checkbox" required>
+            <label>I accept the <span class="guidelines">guidelines
+                <div class="guidelines-popup">
+                    <p>1. Respect others.</p>
+                    <p>2. Maintain confidentiality.</p>
+                    <p>3. Use appropriate language.</p>
+                    <p>4. Follow ethical practices.</p>
+                </div>
+            </span>.</label>
         </div>
+
+        <button type="submit" class="btn">Sign Up</button>
     </form>
-{% endblock %}
+
+    <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log in here</a></p>
+</div>
+
+</body>
+</html>

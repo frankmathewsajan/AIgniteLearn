@@ -1,167 +1,328 @@
-{% extends "learn/layout.html" %}
-{% load static %}
-{% block title %}PACE Probe{% endblock %}
-{% block styles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIgnite - Empowering Your Learning Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .card {
-            border: 1px solid #f0a465;
-            background-color: #fef4eb;
+        /* Color palette and base styles */
+        :root {
+            --primary-color: #0E003D;
+            --navbar-color: #283F3B;
+            --accent-color: #FC6DAB;
+            --secondary-color: #B6DCFE;
+            --background-light: #F7F6C5;
+            --text-color: #333;
+            --hover-glow: rgba(252, 109, 171, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-light);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Floating Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--navbar-color);
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar .brand-logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .navbar .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar .search-bar input[type="text"] {
+            width: 60%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+            margin-right: 1rem;
+        }
+
+        .navbar .streak-box {
+            display: flex;
+            align-items: center;
+            color: white;
+            background-color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .navbar .nav-item {
+            color: white;
+            margin-left: 1rem;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .navbar .nav-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .navbar .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .navbar .profile-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: var(--navbar-color);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .profile-dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .profile-dropdown-content a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .profile-dropdown:hover .profile-dropdown-content {
+            display: block;
+        }
+
+        /* AI Chatbot Section */
+        .chatbot {
             text-align: center;
-            padding: 20px;
-            height: 25vh;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Ensures smooth hover transition */
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            max-width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .card:hover {
-            transform: scale(1.05); /* Zoom effect */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+        .chatbot h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
 
-        .card h5 {
-            color: #ff6f00;
+        .chatbot input[type="text"] {
+            width: 80%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
         }
 
-        .card-body {
-            color: #7a7a7a;
+        /* Welcome Section */
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 80px; /* Space for floating navbar */
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Course Cards */
+        .course-selection {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .course-selection h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .courses {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .course-card {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: var(--hover-glow);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--navbar-color);
+            color: white;
+            margin-top: 2rem;
+        }
+
+
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 26px;
+            padding: 6px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
         }
     </style>
-{% endblock %}
-{% block body %}
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <!-- NASA Logo as Navbar Brand -->
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'learn/imgs/NASA_logo.svg' %}" alt="NASA Logo" width="45" height="45"
-                     class="d-inline-block align-text-top">
-                <img src="{% static 'learn/imgs/PACE_Mission_Logo.png' %}" alt="PACE Logo" width="45" height="45"
-                     class="d-inline-block align-text-top">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+</head>
+<body>
 
-                <!-- Search Bar -->
-
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="{% url 'profile' %}">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <div class="section">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-start">Main Courses</h1>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <!-- Beginner Level -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <a href="{% url 'courses' 'beginner' %}" style="text-decoration: none">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Introduction to Ocean and Climate Data</h5>
-                                <p class="card-text">Beginner Level</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Intermediate Level -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <a href="{% url 'courses' 'intermediate' %}" style="text-decoration: none">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Understanding PACE Data: Aerosols & Ocean Color</h5>
-                                <p class="card-text">Intermediate Level</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Advanced Level -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <a href="{% url 'courses' 'advanced' %}" style="text-decoration: none">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Data Analysis and Visualization with PACE Tools</h5>
-                                <p class="card-text">Advanced Level</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-start">PACE Ecosystem</h1>
-                </div>
-            </div>
-            <div class="row mt-2">
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">PLANKTON</h5>
-                            <p class="card-text">Beginner Level</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">AEROSOL</h5>
-                            <p class="card-text">Intermediate Level</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">CLOUD</h5>
-                            <p class="card-text">Advanced Level</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">OCEAN</h5>
-                            <p class="card-text">Advanced Level</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="brand-logo">AIgnite</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="streak-box">
+        🔥Streak: {{ days|default:0 }} Days
+    </div>
+    <a href="{% url 'about' %}" class="nav-item">About Us</a>
+    <a href="{% url 'contact' %}" class="nav-item">Contact</a>
+    <div class="profile-dropdown">
+            <span class="nav-item">
+                <span>
+                    <i class="fa fa-user" style="font-size:18px"></i>
+                <i style="margin-bottom: 2px; font-size: large">{{ user.username }}</i>
+                </span>
+            </span>
+        <div class="profile-dropdown-content">
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'contact' %}">Help</a>
+            <a href="{% url 'logout' %}">Logout</a>
         </div>
     </div>
-{% endblock %}
-{% block scripts %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+</nav>
 
-    <script src="https://kit.fontawesome.com/35c881c056.js" crossorigin="anonymous"></script>
-{% endblock %}
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <h1>Welcome to AIgnite!</h1>
+    <p>Your personalized platform for interactive learning. Join us daily to track your progress and grow with each
+        session!</p>
+</section>
+
+<!-- AI Chatbot Section -->
+<section class="chatbot">
+    <h2>Ask Our AI Chatbot</h2>
+    <input type="text" placeholder="How can we assist you today?">
+    <button class="button">Ask!</button>
+</section>
+
+<!-- Course Selection Section -->
+<section class="course-selection">
+    <h2>Select Your Course</h2>
+    <div class="courses">
+        <div class="course-card">Engineering</div>
+        <div class="course-card">Medical</div>
+        <div class="course-card">UPSC</div>
+        <div class="course-card">Law</div>
+        <div class="course-card">Arts</div>
+        <div class="course-card">Commerce</div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2024 AIgnite | All Rights Reserved.
+</footer>
+
+</body>
+</html>

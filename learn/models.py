@@ -27,3 +27,12 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=500)
+    options = models.JSONField()  # Store options as JSON
+    correct_option = models.CharField(max_length=100)  # Store the correct option
+
+    def __str__(self):
+        return self.question_text

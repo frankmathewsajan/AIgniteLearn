@@ -1,193 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIgnite - Sign Up</title>
-    <style>
-        /* Root colors and styling */
-        :root {
-            --primary-color: #0E003D;
-            --accent-color: #FC6DAB;
-            --background-light: #F3FAE1;
-            --text-color: #333;
-        }
+{% extends 'learn/auth/layout.html' %}
+{% load static %}
 
-        /* Basic styling */
-        body, html {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: var(--background-light);
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-
-        /* Container for signup box */
-        .container {
-            background-color: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            animation: fadeIn 1.2s ease;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            animation: slideDown 1s ease;
-        }
-
-        p {
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Input styling */
-        input {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.7rem 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: box-shadow 0.3s ease;
-        }
-
-        input:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(252, 109, 171, 0.5);
-        }
-
-        /* Button styling */
-        .btn {
-            width: 100%;
-            padding: 0.8rem;
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(252, 109, 171, 0.5);
-        }
-
-        /* Checkbox container */
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-color);
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .checkbox-container input {
-            margin-right: 0.5rem;
-            transform: scale(1.2);
-        }
-
-        /* Guidelines popup */
-        .guidelines {
-            color: var(--accent-color);
-            cursor: pointer;
-            position: relative;
-            margin-left: 0.3rem;
-        }
-
-        .guidelines-popup {
-            display: none;
-            position: absolute;
-            top: -150px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            height: 150px;
-            overflow-y: scroll;
-            text-align: left;
-            font-size: 0.85rem;
-            animation: fadeIn 0.5s ease;
-        }
-
-        /* Show guidelines popup on hover */
-        .guidelines:hover .guidelines-popup {
-            display: block;
-        }
-
-        /* Link to login page */
-        .login-link {
-            margin-top: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .login-link a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .login-link a:hover {
-            color: #ff9dc2;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
+{% block form_info %}
     <h1>Create an Account</h1>
     <p>Join AIgnite today and start learning with us!</p>
     {% if message %}
         <span style="color: red">{{ message }}</span>
     {% endif %}
-    
+
     <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
-        <input type="text" name="user_name" placeholder="First Name" required aria-label=""><br>
-        <input type="text" name="username" placeholder="Username" required aria-label=""><br>
-        <input type="password" name="password" placeholder="Password" required aria-label=""><br>
-        <input type="password" name="confirmation" placeholder="Confirm Password" required aria-label=""><br>
-        
+        <input type="text" name="user_name" placeholder="First Name" required aria-label="Enter your first name"><br>
+        <input type="text" name="username" placeholder="Username" required aria-label="Enter your username"><br>
+        <input type="password" name="password" placeholder="Password" required aria-label="Enter your password"><br>
+        <input type="password" name="confirmation" placeholder="Confirm Password" required
+               aria-label="Confirm your password"><br>
+
         <!-- Checkbox with guidelines popup -->
         <div class="checkbox-container">
-            <input type="checkbox" required aria-label="">
+            <input type="checkbox" style="width: auto !important;" required aria-label="Accept guidelines">
             <label>I accept the <span class="guidelines">guidelines
                 <div class="guidelines-popup">
                     <p>1. Respect others.</p>
@@ -201,8 +32,5 @@
         <button type="submit" class="btn">Sign Up</button>
     </form>
 
-    <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log in here</a></p>
-</div>
-
-</body>
-</html>
+    <p class="login-link">Already have an account? <a href="{% url 'login' %}" style="color: white">Log in here</a></p>
+{% endblock %}

@@ -174,17 +174,20 @@
 <div class="container">
     <h1>Create an Account</h1>
     <p>Join AIgnite today and start learning with us!</p>
+    {% if message %}
+        <span style="color: red">{{ message }}</span>
+    {% endif %}
     
     <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
-        <input type="text" name="user_name" placeholder="Name" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <input type="password" name="password" placeholder="Password" required><br>
-        <input type="password" name="confirmation" placeholder="Confirm Password" required><br>
+        <input type="text" name="user_name" placeholder="First Name" required aria-label=""><br>
+        <input type="text" name="username" placeholder="Username" required aria-label=""><br>
+        <input type="password" name="password" placeholder="Password" required aria-label=""><br>
+        <input type="password" name="confirmation" placeholder="Confirm Password" required aria-label=""><br>
         
         <!-- Checkbox with guidelines popup -->
         <div class="checkbox-container">
-            <input type="checkbox" required>
+            <input type="checkbox" required aria-label="">
             <label>I accept the <span class="guidelines">guidelines
                 <div class="guidelines-popup">
                     <p>1. Respect others.</p>

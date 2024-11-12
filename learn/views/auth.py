@@ -1,9 +1,7 @@
-import json
-
 from django.contrib.auth import authenticate, login as user_login, logout as user_logout
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.utils.crypto import get_random_string
@@ -15,9 +13,9 @@ def login(request):
     if request.method == "POST":
 
         # Attempt to sign user in
-        email = request.POST["email"]
+        username = request.POST["username"]
         password = request.POST["password"]
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=username, password=password)
 
         # Check if authentication successful
         if user is not None:
@@ -42,16 +40,14 @@ def generate_unique_username(user_name, existing_usernames):
         username = f"{username}_{get_random_string(4, '0123456789')}"
 
     return username
+
+
 def register(request):
     if request.method == "POST":
-        user_name = request.POST["user_name"]
-        email = request.POST["email"]
+        username = request.POST["username"]
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
-
-        user_name = request.POST["user_name"]
-        existing_usernames = set(User.objects.values_list("username", flat=True))  # Fetch existing usernames
-        unique_username = generate_unique_username(user_name, existing_usernames)
+        first_name = request.POST['user_name']
 
         if password != confirmation:
             return render(request, "learn/auth/register.html", {
@@ -60,8 +56,8 @@ def register(request):
 
         # Attempt to create new user
         try:
-            user = User.objects.create_user(email=email, password=password, username=unique_username)
-            profile = Profile(user=user, first_name=user_name)
+            user = User.objects.create_user(username=username, password=password)
+            profile = Profile(user=user, first_name=first_name)
             user.save()
             profile.save()
         except IntegrityError as e:

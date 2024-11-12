@@ -172,7 +172,7 @@
 
     <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
-        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="text" name="username" placeholder="Username" required><br>
         <input type="password" name="password" placeholder="Password" required><br>
         
         <div class="checkbox-container">

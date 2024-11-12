@@ -1,19 +1,25 @@
-import datetime
-
 import cv2
 import mediapipe as mp
+import numpy as np
+import pyaudio
+import struct
+import time
 
 # Initialize Mediapipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1, refine_landmarks=True,
                                   min_detection_confidence=0.5)
 
+# PyAudio parameters for noise detection
+CHUNK = 1024  # Buffer size
+FORMAT = pyaudio.paInt16  # 16-bit audio format
+CHANNELS = 1  # Mono audio
+RATE = 44100  # Sampling rate
+NOISE_THRESHOLD = 100  # Amplitude threshold for noise detection
 
-# Log unusual activity to a file
-def log_activity(activity):
-    with open("log.txt", "a") as log_file:
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_file.write(f"[{timestamp}] {activity}\n")
+# Initialize PyAudio
+audio = pyaudio.PyAudio()
+stream = audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
 
 
 # Function to detect face orientation
@@ -52,7 +58,7 @@ def get_eye_gaze(landmarks, width, height):
 
 
 # Function to detect mouth open status
-def is_mouth_open(landmarks, width, height):
+def is_mouth_open(landmarks, height):
     upper_lip = landmarks[13]
     lower_lip = landmarks[14]
 
@@ -60,6 +66,20 @@ def is_mouth_open(landmarks, width, height):
     lower_lip_y = lower_lip.y * height
 
     return abs(lower_lip_y - upper_lip_y) > 10  # Threshold for mouth opening
+
+
+# Function to detect noise levels
+def detect_noise():
+    data = stream.read(CHUNK, exception_on_overflow=False)
+    audio_data = struct.unpack(str(CHUNK) + 'h', data)
+    amplitude = max(audio_data)
+    return amplitude > NOISE_THRESHOLD
+
+
+# Function to log unusual activities
+def log_activity(message):
+    with open("log.txt", "a") as log_file:
+        log_file.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
 
 
 # Start video capture
@@ -80,18 +100,10 @@ while True:
                 x, y = int(landmark.x * width), int(landmark.y * height)
                 cv2.circle(frame, (x, y), 1, (0, 255, 0), -1)
 
-            for connection in mp_face_mesh.FACEMESH_TESSELATION:
-                start_idx, end_idx = connection
-                start = face_landmarks.landmark[start_idx]
-                end = face_landmarks.landmark[end_idx]
-                start_coords = int(start.x * width), int(start.y * height)
-                end_coords = int(end.x * width), int(end.y * height)
-                cv2.line(frame, start_coords, end_coords, (0, 255, 0), 1)
-
             # Determine head orientation, eye gaze, and mouth open status
             turn_direction = get_face_turn(face_landmarks.landmark, width, height)
             eye_gaze = get_eye_gaze(face_landmarks.landmark, width, height)
-            mouth_open = is_mouth_open(face_landmarks.landmark, width, height)
+            mouth_open = is_mouth_open(face_landmarks.landmark, height)
 
             cv2.putText(frame, f'Head Turn: {turn_direction}', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
             cv2.putText(frame, f'Gaze: {eye_gaze}', (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
@@ -100,15 +112,26 @@ while True:
 
             # Log unusual activities
             if turn_direction != "Forward":
-                log_activity(f"Head Turn Detected: {turn_direction}")
+                log_activity(f"Unusual Head Turn: {turn_direction}")
             if eye_gaze != "Looking Forward":
-                log_activity(f"Eye Gaze Detected: {eye_gaze}")
+                log_activity(f"Unusual Eye Gaze: {eye_gaze}")
             if mouth_open:
-                log_activity("Mouth Open Detected")
+                log_activity("Mouth Opened")
+
+    # Detect noise
+    noise_detected = detect_noise()
+    cv2.putText(frame, f'Noise: {"Detected" if noise_detected else "Quiet"}', (50, 200), cv2.FONT_HERSHEY_SIMPLEX, 1,
+                (255, 255, 0), 2)
+
+    if noise_detected:
+        log_activity("Unusual Noise Detected")
 
     cv2.imshow("Proctoring Software", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 cap.release()
+stream.stop_stream()
+stream.close()
+audio.terminate()
 cv2.destroyAllWindows()

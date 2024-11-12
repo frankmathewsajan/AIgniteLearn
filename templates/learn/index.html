@@ -138,6 +138,12 @@
             border-radius: 10px;
             max-width: 80%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: height 0.3s ease;
+        }
+
+        .chatbot.expanded {
+            height: 300px;
         }
 
         .chatbot h2 {
@@ -147,11 +153,90 @@
         }
 
         .chatbot input[type="text"] {
-            width: 80%;
+            width: 60%;
             padding: 0.8rem;
             font-size: 1rem;
             border-radius: 4px;
             border: none;
+            margin-bottom: 1rem;
+        }
+
+        .chatbot button {
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot button:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Loading animation */
+        .loading {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .loading span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 2px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: wave 0.6s infinite alternate;
+        }
+
+        .loading span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes wave {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Response box and close button */
+        .response-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .response-box.active {
+            display: block;
+            max-width: 100%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
         /* Welcome Section */
@@ -223,45 +308,6 @@
         }
 
 
-        .button {
-            display: inline-block;
-            border-radius: 4px;
-            background-color: #f4511e;
-            border: none;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 26px;
-            padding: 6px;
-            width: 100px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        .button span {
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-        }
-
-        .button span:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: 0.5s;
-        }
-
-        .button:hover span {
-            padding-right: 25px;
-        }
-
-        .button:hover span:after {
-            opacity: 1;
-            right: 0;
-        }
     </style>
 </head>
 <body>
@@ -300,17 +346,27 @@
 </section>
 
 <!-- AI Chatbot Section -->
-<section class="chatbot">
+<section class="chatbot" id="chatbot">
     <h2>Ask Our AI Chatbot</h2>
-    <input type="text" placeholder="How can we assist you today?">
-    <button class="button">Ask!</button>
+    <input type="text" id="userInput" placeholder="How can we assist you today?">
+    <button onclick="startSearch()" class="button">Ask</button>
+
+    <div class="loading" id="loading">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div id="responseBox" class="response-box">
+        <button class="close-btn" onclick="closeResponse()">X</button>
+        <p id="chatbotResponse">Waiting for input...</p>
+    </div>
 </section>
+
 
 <!-- Course Selection Section -->
 <section class="course-selection">
     <h2>Select Your Course</h2>
     <div class="courses">
-        <div class="course-card">Engineering</div>
+        <div class="course-card" >Engineering</div>
         <div class="course-card">Medical</div>
         <div class="course-card">UPSC</div>
         <div class="course-card">Law</div>
@@ -318,7 +374,75 @@
         <div class="course-card">Commerce</div>
     </div>
 </section>
+<script>
+    function startSearch() {
+        const chatbot = document.getElementById('chatbot');
+        const loading = document.getElementById('loading');
+        const responseBox = document.getElementById('responseBox');
+        const chatbotResponse = document.getElementById('chatbotResponse');
+        const input = document.getElementById('userInput').value.toLowerCase();
 
+        // Expand chatbot background and show loading animation
+        chatbot.classList.add('expanded');
+        loading.style.display = 'flex';
+        responseBox.classList.remove('active');
+
+        // Simulate a 4-second loading time
+        setTimeout(() => {
+            loading.style.display = 'none';
+            handleChatbotResponse(input);
+            responseBox.classList.add('active');
+        }, 4000);
+    }
+
+    function handleChatbotResponse(input) {
+        const chatbotResponse = document.getElementById('chatbotResponse');
+
+        if (input.includes("engineering")) {
+            chatbotResponse.innerHTML = "Engineering includes streams like Computer Science (CSE), Electronics & Communication (ECE), Mechanical, Civil, Electrical, Chemical, and Aerospace. Which one are you interested in?";
+        } else if (input.includes("cse") || input.includes("computer science")) {
+            chatbotResponse.innerHTML = "In Computer Science Engineering (CSE), mastering programming languages, data structures, algorithms, and system design is key. Platforms like LeetCode and participating in hackathons help build skills.";
+        } else if (input.includes("ece") || input.includes("electronics")) {
+            chatbotResponse.innerHTML = "ECE covers digital and analog circuits, communication systems, and signal processing. Practicing circuit design, understanding network theory, and staying updated on tech innovations is valuable.";
+        } else if (input.includes("mechanical")) {
+            chatbotResponse.innerHTML = "Mechanical Engineering involves thermodynamics, mechanics, and materials science. Hands-on experience with CAD software and internships in manufacturing can be highly beneficial.";
+        } else if (input.includes("civil")) {
+            chatbotResponse.innerHTML = "Civil Engineering focuses on structures, construction, and environmental sustainability. Skills in AutoCAD, project management, and materials science are essential for success.";
+        } else if (input.includes("electrical")) {
+            chatbotResponse.innerHTML = "Electrical Engineering includes circuits, power systems, and control systems. Practical experience in PCB design and knowledge of electronics is helpful.";
+        } else if (input.includes("chemical")) {
+            chatbotResponse.innerHTML = "Chemical Engineering involves the study of chemical reactions, material science, and process engineering. Skills in chemistry and lab work are critical.";
+        } else if (input.includes("aerospace")) {
+            chatbotResponse.innerHTML = "Aerospace Engineering is all about aircraft and spacecraft design. Focus areas include aerodynamics, propulsion, and flight mechanics.";
+        } else if (input.includes("medical")) {
+            chatbotResponse.innerHTML = "In medicine, study anatomy, physiology, and pharmacology thoroughly. Hands-on practice, clinical exposure, and studying case histories are vital for building medical knowledge.";
+        } else if (input.includes("upsc")) {
+            chatbotResponse.innerHTML = "For UPSC, cover General Studies, History, Polity, Geography, and Current Affairs thoroughly. Regular reading of newspapers and NCERT books can strengthen your preparation.";
+        } else if (input.includes("arts")) {
+            chatbotResponse.innerHTML = "Arts include subjects like History, Literature, Sociology, and Psychology. Critical analysis, understanding theories, and engaging in research are beneficial.";
+        } else if (input.includes("commerce")) {
+            chatbotResponse.innerHTML = "Commerce involves Accounting, Finance, Economics, and Business Studies. Strengthening your knowledge in financial analysis and market understanding is helpful for a career in this field.";
+        } else if (input.includes("law")) {
+            chatbotResponse.innerHTML = "Law covers Constitutional Law, Criminal Law, and Civil Law. Strong analytical skills and familiarity with case laws are essential. Interning with legal firms can provide hands-on experience.";
+        } else if (input.includes("management") || input.includes("mba")) {
+            chatbotResponse.innerHTML = "Management studies include subjects like Marketing, Finance, and Operations. Case studies and group projects are integral, and internships provide practical experience.";
+        } else if (input.includes("psychology")) {
+            chatbotResponse.innerHTML = "Psychology studies mental processes and behaviors. Courses in cognitive, clinical, and social psychology are foundational. Practical experience through internships is recommended.";
+        } else if (input.includes("hello") || input.includes("hi")) {
+            chatbotResponse.innerHTML = "Hello! How can I assist you today?";
+        } else if (input.includes("arts") || input.includes("fine arts")) {
+            chatbotResponse.innerHTML = "Fine Arts involves painting, sculpture, and digital art. Developing your own style and practicing different mediums can enhance creativity.";
+        } else {
+            chatbotResponse.innerHTML = "I'm here to help! Could you rephrase or specify your question?";
+        }
+    }
+
+    function closeResponse() {
+        const chatbot = document.getElementById('chatbot');
+        document.getElementById('responseBox').classList.remove("active");
+        chatbot.classList.remove('expanded');
+    }
+</script>
 <!-- Footer -->
 <footer class="footer">
     &copy; 2024 AIgnite | All Rights Reserved.

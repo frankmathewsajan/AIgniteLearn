@@ -5,6 +5,7 @@ import os
 import random
 import re
 import subprocess
+import threading
 
 import numpy as np
 from PIL import Image
@@ -17,8 +18,32 @@ from learn.forms import ProfileForm
 from learn.models import Profile, Question
 
 
+def engg(request):
+    return render(request, "learn/engg.html")
+
+
+def run_face_script(venv_python_path, face_script_path):
+    """Function to execute the face.py script asynchronously."""
+    try:
+        process = subprocess.Popen(
+            [venv_python_path, face_script_path],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+
+        print("Proctoring tool launched successfully.")
+        if stdout:
+            print("STDOUT:", stdout.decode())
+        if stderr:
+            print("STDERR:", stderr.decode())
+    except Exception as e:
+        print(f"Error launching proctoring tool: {e}")
+
+
 def sort_log(log_data):
-    log_entries = re.findall(r"\[(.*?)\] (.+)", log_data)
+    # Regex to match log entries in the format "timestamp - message"
+    log_entries = re.findall(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (.+)", log_data)
 
     # Group by message
     grouped_logs = {}
@@ -42,16 +67,29 @@ def sort_log(log_data):
 def exam(request):
     print(10)
     if request.method == 'POST':
-        try:
-            log_file_path = r"C:\Users\MagnumOpus\PycharmProjects\AIgniteLearn\log.txt"
-            with open(log_file_path, "r") as log_file:
-                # Process the log file to get the summary
-                summary = sort_log(log_file.read())
+        if request.method == 'POST':
+            try:
+                # Parse incoming JSON data
+                data = json.loads(request.body)
 
-            return render(request, 'learn/log.html', {'summary': summary})
-        except Exception as e:
-            print(f"Error processing log file: {e}")
-            return render(request, 'learn/log.html', {'summary': [], 'error': 'Failed to process log file.'})
+                # Extract values from the data
+                status = data.get('status')
+                time_left = data.get('timeLeft')
+                answers = data.get('answers')
+
+                # Print or log the answers for now
+                print(f"Exam Status: {status}, Time Left: {time_left}")
+                print(f"Answers: {answers}")
+
+                # Example: Saving answers to the database (add your own logic here)
+                # You can save the data to a model, such as ExamSubmission, with the answers
+                # For simplicity, we are just printing them
+
+                # Return a success response
+                return JsonResponse({'message': 'Exam data submitted successfully'}, status=200)
+
+            except json.JSONDecodeError:
+                return JsonResponse({'error': 'Invalid JSON data'}, status=400)
 
     # Path to the face.py script
     face_script_path = os.path.join(os.path.dirname(__file__), 'face.py')
@@ -59,22 +97,8 @@ def exam(request):
     # Path to the virtual environment's Python interpreter
     venv_python_path = r"C:\Users\MagnumOpus\PycharmProjects\AIgniteLearn\.venv\Scripts\python.exe"
 
-    try:
-        # Execute the face.py script using the virtual environment
-        process = subprocess.Popen(
-            [venv_python_path, face_script_path],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-        stdout, stderr = process.communicate()
-
-        print("Proctoring tool launched successfully.")
-        if stdout:
-            print("STDOUT:", stdout.decode())
-        if stderr:
-            print("STDERR:", stderr.decode())
-    except Exception as e:
-        print(f"Error launching proctoring tool: {e}")
+    # Launch the face.py script asynchronously
+    threading.Thread(target=run_face_script, args=(venv_python_path, face_script_path)).start()
 
     # Retrieve all questions for the exam
     try:
@@ -95,6 +119,16 @@ def index(request):
 
 def welcome(request):
     return render(request, "learn/welcome.html")
+
+
+def report(request):
+    log_file_path = r"C:\Users\MagnumOpus\PycharmProjects\AIgniteLearn\log.txt"
+    with open(log_file_path, "r") as log_file:
+        # Process the log file to get the summary
+        summary = sort_log(log_file.read())
+    return render(request, "learn/report.html", {
+        "log": summary
+    })
 
 
 def home(request):

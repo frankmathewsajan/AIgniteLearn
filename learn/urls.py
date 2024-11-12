@@ -5,10 +5,12 @@ from .views import views, auth, courses
 urlpatterns = [
     path('login/', auth.login, name='login'),
 
+    path('engg', views.engg, name='engg'),
     path('welcome', views.welcome, name='welcome'),
     path('home', views.home, name='home'),
 
-path('exam', views.exam, name='exam'),
+    path('exam', views.exam, name='exam'),
+    path('report', views.report, name='report'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('register/', auth.register, name='register'),

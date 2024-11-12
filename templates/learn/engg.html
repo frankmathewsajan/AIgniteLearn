@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .option {
+            width: 48%;
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .option h2 {
+            color: #0056b3;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        footer nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer nav ul li a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Engineering Course: Module Overview</h1>
+        <p>Welcome to the Engineering Course. Please choose one of the following options to begin.</p>
+    </header>
+
+    <div class="options">
+        <div class="option">
+            <h2>1. Coding Exercise</h2>
+            <p><strong>Objective:</strong> Complete the coding exercises to practice and solidify your understanding of
+                the engineering concepts.</p>
+            <p><strong>Instructions:</strong></p>
+            <ul>
+                <li>Each exercise focuses on practical skills and applying theoretical knowledge.</li>
+                <li>Ensure to write clean and optimized code.</li>
+                <li>Use the provided IDE or text editor to submit your code.</li>
+            </ul>
+            <p><strong>Tasks:</strong></p>
+            <ul>
+                <li>Solve the problems in the given order.</li>
+                <li>Submit the completed code via the submission link.</li>
+                <li>You will receive instant feedback on your solutions.</li>
+            </ul>
+            <button onclick="window.location.href='coding-exercise.html'">Start Coding Exercise</button>
+        </div>
+
+        <div class="option">
+            <h2>2. Test</h2>
+            <p><strong>Objective:</strong> Assess your knowledge through a timed quiz.</p>
+            <p><strong>Instructions:</strong></p>
+            <ul>
+                <li>The test consists of multiple-choice and short-answer questions.</li>
+                <li>You have <strong>30 minutes</strong> to complete the test.</li>
+                <li>No external resources are allowed during the test.</li>
+            </ul>
+            <p><strong>Test Format:</strong></p>
+            <ul>
+                <li><strong>Multiple-Choice Questions</strong>: Answer by selecting the correct option.</li>
+                <li><strong>Short-Answer Questions</strong>: Type your answer in the provided space.</li>
+            </ul>
+            <p><strong>Grading:</strong> The test will be automatically graded once submitted. Results will be available
+                immediately after submission.</p>
+            <button onclick="window.location.href='test.html'">Start Test</button>
+        </div>
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="course-materials.html">View Course Materials</a></li>
+                <li><a href="contact-instructor.html">Contact Instructor</a></li>
+                <li><a href="course-overview.html">Course Overview</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,11 +1,13 @@
 from django.urls import path
 
 from .views import views, auth, courses
+from .views.utils import execute_code
 
 urlpatterns = [
     path('login/', auth.login, name='login'),
 
-    path('engg', views.engg, name='engg'),
+    path('compiler', views.compiler, name='compiler'),
+    path('execute/', execute_code, name='execute_code'),
     path('welcome', views.welcome, name='welcome'),
     path('home', views.home, name='home'),
 

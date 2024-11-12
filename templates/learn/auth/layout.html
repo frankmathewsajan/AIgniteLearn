@@ -202,10 +202,16 @@
 
 <script>
     // Toggle guidelines popup
-    document.querySelector('.guidelines').addEventListener('click', (e) => {
+    document.querySelector('.guidelines').addEventListener('mouseover', (e) => {
         e.preventDefault();
-        e.target.classList.toggle('active');
+        e.target.classList.add('active');
+        setTimeout(
+            () => {
+                e.target.classList.remove('active');
+            }, 3000
+        )
     });
+
 </script>
 </body>
 </html>

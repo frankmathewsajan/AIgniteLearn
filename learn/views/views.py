@@ -23,6 +23,18 @@ def features(request):
     return render(request, "learn/features.html")
 
 
+def perks(request):
+    return render(request, "learn/perks.html")
+
+
+def hackathon(request):
+    return render(request, "learn/hackathon.html")
+
+
+def game(request):
+    return render(request, "learn/game.html")
+
+
 def about(request):
     return render(request, "learn/about.html")
 
@@ -63,23 +75,25 @@ def setup(request):
     return render(request, "learn/user/setup.html", {
         "profile": Profile.objects.filter(user=request.user).first(),
         "edu_list": ["Primary", "Secondary", "High School", "Undergraduate", "Graduate", "Professional"],
-        "style_list": ["Visual", "Auditory", "Reading/Writing", "Kinesthetic"],
-        "interests": ["Oceanography",
-                      "Satellite Technology",
-                      "Earth Observation",
-                      "Remote Sensing",
-                      "Marine Biology",
-                      "Exoplanets",
-                      "Climate Science",
-                      "Add Your Own"],
+        "style_list": ["Visual", "Auditory", "Reading/Writing"],
+
+        "interests": [
+            "Biomedical Engineering",
+            "Robotics and Automation",
+            "Medical Imaging Technology",
+            "Nanotechnology in Medicine",
+            "Artificial Intelligence in Healthcare",
+            "Prosthetics and Wearable Devices",
+            "Healthcare Systems Optimization",
+        ],
         "goals": [
-            "Explore Planets and Satellites",
-            "Develop Critical Thinking in Science",
-            "Enhance Research Skills",
-            "Build Satellite Expertise",
-            "Master Space Concepts",
-            "Develop Remote Sensing Skills",
-            "Contribute to Climate Solutions"
+            "Advance Medical Robotics and Devices",
+            "Develop Analytical and Problem-Solving Skills in Engineering",
+            "Enhance Research Methodologies in Biomedical Fields",
+            "Innovate AI Applications for Diagnostics and Treatment",
+            "Master the Design of Healthcare Systems",
+            "Pioneer Sustainable Engineering Solutions for Medical Needs",
+            "Contribute to Life-Saving Technologies"
         ]
 
     })

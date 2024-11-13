@@ -5,83 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | EdTech Integration Platform</title>
     <style>
-        /* Color scheme for professional appearance */
+        /* Color scheme with vibrant, eye-catching colors */
         :root {
-            --primary-color: #0E003D;
-            --secondary-color: #283F3B;
-            --accent-color: #FC6DAB;
-            --background-color: #F7F6C5;
-            --text-color: #333;
+            --primary-color: #0061f2;
+            --secondary-color: #00d2ff;
+            --accent-color: #ff4d88;
+            --background-color: #f0f8ff;
+            --card-background: #ffffff;
+            --text-color: #202124;
         }
 
-        /* Basic styling */
+        /* Body styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            color: var(--text-color);
             background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Header styling */
+        /* Header section with gradient */
         .header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
-            padding: 2rem;
+            padding: 70px 20px;
             text-align: center;
+            position: relative;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .header p {
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 300;
         }
 
-        /* About content */
+        /* Main Content Area with animated card layout */
         .content {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px 30px;
+            background: var(--card-background);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            animation: slideUp 1.2s ease-out forwards;
+            transform: scale(0.97);
         }
 
         .content h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .content p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            text-align: justify;
         }
 
-        /* Vision, Mission, Values styling */
-        .section {
-            margin-top: 2rem;
-        }
-
+        /* Section Titles */
         .section h3 {
             color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
         }
 
-        .section p {
-            font-size: 1rem;
+        /* Core Values and Additional Cards */
+        .section .core-values {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .core-values div {
+            background: linear-gradient(145deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 240px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Glow and hover effect for cards */
+        .core-values div:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 194, 255, 0.8), 0 0 30px rgba(255, 77, 136, 0.6);
+        }
+
+        .core-values h4 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+            .core-values {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <div class="header">
         <h1>About Us</h1>
         <p>Bridging Technology and Education for a Future-Ready World</p>
@@ -104,10 +164,32 @@
 
         <div class="section">
             <h3>Our Core Values</h3>
-            <p><strong>Innovation:</strong> Constantly pushing the boundaries of what’s possible in EdTech.</p>
-            <p><strong>Inclusivity:</strong> Designing solutions that are accessible and beneficial for all learners, regardless of background or ability.</p>
-            <p><strong>Integrity:</strong> Upholding academic honesty with AI-powered exam monitoring and other integrity-driven tools.</p>
-            <p><strong>Collaboration:</strong> Enhancing student engagement through peer-to-peer learning opportunities.</p>
+            <div class="core-values">
+                <div>
+                    <h4>Innovation</h4>
+                    <p>Pushing the boundaries of EdTech with creative, forward-thinking solutions.</p>
+                </div>
+                <div>
+                    <h4>Inclusivity</h4>
+                    <p>Building tools that are accessible and empowering for all learners.</p>
+                </div>
+                <div>
+                    <h4>Integrity</h4>
+                    <p>Maintaining trust through academic honesty with AI-driven tools.</p>
+                </div>
+                <div>
+                    <h4>Collaboration</h4>
+                    <p>Creating engagement through shared learning opportunities.</p>
+                </div>
+                <div>
+                    <h4>Feasibility</h4>
+                    <p>Ensuring our solutions are practical and readily implementable in diverse learning environments.</p>
+                </div>
+                <div>
+                    <h4>Scalability</h4>
+                    <p>Designing systems that can grow and adapt with evolving educational needs.</p>
+                </div>
+            </div>
         </div>
 
         <div class="section">

@@ -15,19 +15,22 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
 
+    path('hackathon', views.hackathon, name='hackathon'),
+    path('game', views.game, name='game'),
+    path('perks', views.perks, name='perks'),
+
     # Profile and setup paths
     path('profile/', views.profile, name='profile'),
     path('setup', views.setup, name='setup'),
 
     # Course-related paths
     path('courses/<str:lesson>', courses.courses, name='courses'),
-    path('courses/<str:lesson>/<str:id>', courses.courses, name='courses'),
 
     # Exam and reports
     path('exam', ml.exam, name='exam'),
     path('report', ml.report, name='report'),
 
     # Compiler and analysis paths
-    path('compiler', views.compiler, name='compiler'),
+    path('coding', views.compiler, name='coding'),
     path('execute/', execute_code, name='execute_code'),
 ]

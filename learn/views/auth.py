@@ -66,7 +66,7 @@ def register(request):
                 "message": "Username already taken."
             })
         user_login(request, user)
-        return HttpResponseRedirect(reverse("index"))
+        return HttpResponseRedirect(reverse("setup"))
     else:
         return render(request, "learn/auth/register.html") if request.user.is_anonymous else redirect('index')
 

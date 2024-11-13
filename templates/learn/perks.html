@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIgnite - Earn & Redeem Perks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Root Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #E94E77;
+            --accent-color: #F5A623;
+            --background-color: #F9FAFB;
+            --text-color: #333;
+            --light-text: #777;
+            --card-bg: #fff;
+            --button-bg: #4A90E2;
+            --button-hover: #357ABD;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        /* Content Wrapper */
+        .content {
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Coin Info Card */
+        .coin-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .coin-info {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+            transition: transform 0.3s ease;
+        }
+
+        .coin-info:hover {
+            transform: scale(1.05);
+        }
+
+        .coin-info h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .coin-info p {
+            font-size: 1rem;
+            color: var(--light-text);
+        }
+
+        /* Perks Cards */
+        .perks-section {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .perk-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            width: 280px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .perk-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .perk-card img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        .perk-card h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+        }
+
+        .perk-card p {
+            font-size: 1rem;
+            color: var(--light-text);
+        }
+
+        /* Leaderboard Button */
+        .leaderboard-btn {
+            background-color: var(--button-bg);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background-color 0.3s;
+        }
+
+        .leaderboard-btn:hover {
+            background-color: var(--button-hover);
+        }
+
+        /* Leaderboard Section */
+        .leaderboard-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .leaderboard-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .leaderboard-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .leaderboard-tab {
+            padding: 0.6rem 1.5rem;
+            background-color: var(--background-color);
+            border-radius: 25px;
+            color: var(--text-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .leaderboard-tab:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Leaderboard Table */
+        .leaderboard-table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .leaderboard-table th, .leaderboard-table td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .leaderboard-table th {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <h1>AIgnite - Earn & Redeem Perks</h1>
+</div>
+
+<!-- Coin Info Section -->
+<div class="content">
+    <div class="coin-section">
+        <div class="coin-info">
+            <h2>
+                1 Rupee = 1000 Perks
+            </h2>
+            <p>Earn perks by participating in hackathons, challenges, coding exercises, and more!</p>
+        </div>
+        
+    </div>
+
+    <!-- Perks Cards Section -->
+    <div class="perks-section">
+        <div class="perk-card">
+            <img src="https://santa.shakepe.com/images/detailed/63/amazon-Pay_2rlw-c9.png" alt="Amazon Gift Card">
+            <h3>Amazon Gift Cards</h3>
+            <p>Redeem 5000 perks for ₹50 Amazon Gift Cards.</p>
+        </div>
+        <div class="perk-card">
+            <img src="https://assets.mspimages.in/gear/wp-content/uploads/2023/03/OTT_NEW.jpg" alt="OTT Voucher">
+            <h3>OTT Voucher Codes</h3>
+            <p>Exchange perks for discounted subscriptions on top OTT platforms.</p>
+        </div>
+        <div class="perk-card">
+            <img src="https://img.freepik.com/premium-vector/gift-coupon-discount-voucher-20-percent-off-promo-code-shopping-best-promo-retail-pricing_252051-5766.jpg" alt="Discount Coupons">
+            <h3>Exclusive Discounts</h3>
+            <p>Use your perks for partner discounts on online shopping.</p>
+        </div>
+    </div>
+
+    <!-- View Leaderboard Button -->
+    <button class="leaderboard-btn" onclick="window.location.href='leaderboard.html'">View Leaderboard</button>
+</div>
+
+<!-- Leaderboard Section -->
+<div class="leaderboard-section">
+    <h2 class="leaderboard-title">Leaderboard</h2>
+    <div class="leaderboard-tabs">
+        <div class="leaderboard-tab">College-wise</div>
+        <div class="leaderboard-tab">State-wise</div>
+        <div class="leaderboard-tab">Nation-wise</div>
+    </div>
+
+    <table class="leaderboard-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>College</th>
+                <th>Perks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Frank Mathew</td>
+                <td>VIT University</td>
+                <td>15,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Revanth</td>
+                <td>VIT University</td>
+                <td>13,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rushika</td>
+                <td>Parul University</td>
+                <td>12,500</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

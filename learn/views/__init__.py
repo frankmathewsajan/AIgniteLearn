@@ -1,22 +1,27 @@
-import os
 import re
-import subprocess
-
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 
 gcc_path = "C:/msys64/ucrt64/bin/gcc.exe"
-@csrf_exempt
-# Function to run code for different languages
-def execute_code(request):
-    # Get the code and language from request
-    language = request.POST.get('language')
-    code = request.POST.get('code')
 
-    # Set up a temporary file to hold the code
+# Function to run code for different languages
+
+import os
+import subprocess
+import json
+from django.http import JsonResponse
+import platform
+
+
+def execute_code(request):
+    # Get the code and language from the request
+    data = json.loads(request.body)
+
+    language = data.get('language')
+    code = data.get('code')
+    user_input = data.get('user_input', '')  # User input passed in the request body
+
+    # Temporary file setup
     temp_file = 'Main'
 
-    # Depending on the language, write the code to a specific file type
     if language == 'python':
         file_extension = '.py'
         with open(temp_file + file_extension, 'w') as file:
@@ -35,18 +40,38 @@ def execute_code(request):
             file.write(code)
         command = f"node {temp_file + file_extension}"
 
+    elif language == 'c':
+        file_extension = '.c'
+        with open(temp_file + file_extension, 'w') as file:
+            file.write(code)
+        if platform.system() == 'Windows':
+            command = f"gcc {temp_file + file_extension} -o {temp_file}.exe && {temp_file}.exe"
+        else:
+            command = f"gcc {temp_file + file_extension} -o {temp_file} && ./{temp_file}"
+
+    elif language == 'cpp':
+        file_extension = '.cpp'
+        with open(temp_file + file_extension, 'w') as file:
+            file.write(code)
+        if platform.system() == 'Windows':
+            command = f"g++ {temp_file + file_extension} -o {temp_file}.exe && {temp_file}.exe"
+        else:
+            command = f"g++ {temp_file + file_extension} -o {temp_file} && ./{temp_file}"
+
     else:
         return JsonResponse({'error': 'Unsupported language'})
 
     # Execute the code and capture the output
     try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True, timeout=10)
+        result = subprocess.run(command, shell=True, capture_output=True, text=True, input=user_input, timeout=10)
         if result.returncode == 0:
             return JsonResponse({'output': result.stdout})
         else:
             return JsonResponse({'error': result.stderr})
     except subprocess.TimeoutExpired:
         return JsonResponse({'error': 'Code execution timed out'})
+    except Exception as e:
+        return JsonResponse({'error': str(e)})
     finally:
         # Clean up temporary files
         if os.path.exists(temp_file + file_extension):

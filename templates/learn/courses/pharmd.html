@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharm.D. Program</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #3f51b5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #3f51b5;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Pharm.D. Program</h1>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#career">Career Opportunities</a></li>
+            <li><a href="#salary">Salary</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="overview">
+        <h2>Course Overview</h2>
+        <p>The Pharm.D. is a professional doctorate focusing on pharmacy sciences, clinical practice, and patient care.
+            It is designed to train pharmacists who can work in healthcare environments, advising on medications and
+            treatment plans.</p>
+    </section>
+
+    <section id="syllabus">
+        <h2>Syllabus</h2>
+        <ul>
+            <li><strong>Year 1-2:</strong> Basic sciences, medicinal chemistry, pharmacy practice.</li>
+            <li><strong>Year 3-4:</strong> Clinical pharmacy, therapeutic drug monitoring, patient counseling.</li>
+            <li><strong>Year 5-6:</strong> Advanced clinical practice, hospital pharmacy, pharmacy management.</li>
+        </ul>
+    </section>
+
+    <section id="career">
+        <h2>Career Opportunities</h2>
+        <p>Pharm.D. graduates can work as clinical pharmacists, healthcare consultants, pharmacy educators, or in
+            research and pharmaceutical companies.</p>
+    </section>
+
+    <section id="salary">
+        <h2>Salary</h2>
+        <p>Pharm.D. graduates can earn an average salary of INR 4-10 lakhs per annum depending on location, experience,
+            and industry.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Pharm.D. Program | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

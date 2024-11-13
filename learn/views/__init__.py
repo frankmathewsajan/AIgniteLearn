@@ -4,66 +4,51 @@ gcc_path = "C:/msys64/ucrt64/bin/gcc.exe"
 
 # Function to run code for different languages
 
-import os
 import subprocess
+import os
+import tempfile
 import json
 from django.http import JsonResponse
-import platform
 
 
 def execute_code(request):
-    # Get the code and language from the request
+    # Get the code, language, and user input from the request
     data = json.loads(request.body)
-
     language = data.get('language')
     code = data.get('code')
-    user_input = data.get('user_input', '')  # User input passed in the request body
+    user_input = data.get('user_input', '')
 
-    # Temporary file setup
-    temp_file = 'Main'
+    # Define language-specific settings
+    extensions = {
+        'python': '.py',
+        'java': '.java',
+        'javascript': '.js',
+        'c': '.c',
+        'cpp': '.cpp'
+    }
+    commands = {
+        'python': lambda file: f"python3 {file}",
+        'java': lambda file: f"javac {file} && java {file.replace('.java', '')}",
+        'javascript': lambda file: f"node {file}",
+        'c': lambda file: f"gcc {file} -o {file.replace('.c', '')} && ./{file.replace('.c', '')}",
+        'cpp': lambda file: f"g++ {file} -o {file.replace('.cpp', '')} && ./{file.replace('.cpp', '')}"
+    }
 
-    if language == 'python':
-        file_extension = '.py'
-        with open(temp_file + file_extension, 'w') as file:
-            file.write(code)
-        command = f"python3 {temp_file + file_extension}"
-
-    elif language == 'java':
-        file_extension = '.java'
-        with open(temp_file + file_extension, 'w') as file:
-            file.write(code)
-        command = f"javac {temp_file + file_extension} && java {temp_file}"
-
-    elif language == 'javascript':
-        file_extension = '.js'
-        with open(temp_file + file_extension, 'w') as file:
-            file.write(code)
-        command = f"node {temp_file + file_extension}"
-
-    elif language == 'c':
-        file_extension = '.c'
-        with open(temp_file + file_extension, 'w') as file:
-            file.write(code)
-        if platform.system() == 'Windows':
-            command = f"gcc {temp_file + file_extension} -o {temp_file}.exe && {temp_file}.exe"
-        else:
-            command = f"gcc {temp_file + file_extension} -o {temp_file} && ./{temp_file}"
-
-    elif language == 'cpp':
-        file_extension = '.cpp'
-        with open(temp_file + file_extension, 'w') as file:
-            file.write(code)
-        if platform.system() == 'Windows':
-            command = f"g++ {temp_file + file_extension} -o {temp_file}.exe && {temp_file}.exe"
-        else:
-            command = f"g++ {temp_file + file_extension} -o {temp_file} && ./{temp_file}"
-
-    else:
+    # Validate language
+    if language not in extensions:
         return JsonResponse({'error': 'Unsupported language'})
 
-    # Execute the code and capture the output
+    # Create a temporary file
     try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True, input=user_input, timeout=10)
+        with tempfile.NamedTemporaryFile(suffix=extensions[language], delete=False) as temp_file:
+            temp_file.write(code.encode('utf-8'))
+            temp_file_path = temp_file.name
+
+        # Run the code
+        command = commands[language](temp_file_path)
+        result = subprocess.run(
+            command, shell=True, capture_output=True, text=True, input=user_input, timeout=10
+        )
         if result.returncode == 0:
             return JsonResponse({'output': result.stdout})
         else:
@@ -71,13 +56,11 @@ def execute_code(request):
     except subprocess.TimeoutExpired:
         return JsonResponse({'error': 'Code execution timed out'})
     except Exception as e:
-        return JsonResponse({'error': str(e)})
+        return JsonResponse({'error': f'Internal server error: {str(e)}'})
     finally:
-        # Clean up temporary files
-        if os.path.exists(temp_file + file_extension):
-            os.remove(temp_file + file_extension)
-        if os.path.exists(temp_file):
-            os.remove(temp_file)
+        # Cleanup temporary files
+        if os.path.exists(temp_file_path):
+            os.remove(temp_file_path)
 
 
 def run_face_script(venv_python_path, face_script_path):

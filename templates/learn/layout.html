@@ -13,7 +13,7 @@
 <div class="navbar">
     <div class="nav-links">
         <a href="{% url 'index' %}" class="active">Home</a>
-        <a href="{% url 'perks' %}">Leaderboard </a>
+        <a href="{% url 'leaderboard' %}">Leaderboard </a>
     </div>
     <div class="profile">
 
@@ -49,167 +49,254 @@
             <button class="close-chat" onclick="toggleChat()">×</button>
         </div>
         <div class="chat-body">
-    <div class="chat-messages" id="chat-messages">
-        <!-- Django dynamically loaded messages -->
-        {% for message in messages %}
-            <div class="message {{ message.sender }}">{{ message.text }}</div>
-        {% endfor %}
-    </div>
-    <div class="chat-footer">
-        <script>
-            function simulateAI() {
-                const inputField = document.querySelector('input[name="message"]');
-                const chatMessages = document.getElementById('chat-messages');
-                const message = inputField.value.trim().toLowerCase();
+            <div class="chat-messages" id="chat-messages">
+                <!-- Django dynamically loaded messages -->
+                {% for message in messages %}
+                    <div class="message {{ message.sender }}">{{ message.text }}</div>
+                {% endfor %}
+            </div>
+            <div class="chat-footer">
+                <script>
+                    function chatBotResponse(input) {
+                        let response = "";
 
-                // Predefined responses
-                const responses = {
-                    "engineering": {
-                        interests: [
-                            "Biomedical Engineering",
-                            "Robotics and Automation",
-                            "Medical Imaging Technology",
-                            "Nanotechnology in Medicine",
-                            "Artificial Intelligence in Healthcare",
-                            "Prosthetics and Wearable Devices",
-                            "Healthcare Systems Optimization"
-                        ],
-                        goals: [
-                            "Advance Medical Robotics and Devices",
-                            "Develop Analytical and Problem-Solving Skills in Engineering",
-                            "Enhance Research Methodologies in Biomedical Fields",
-                            "Innovate AI Applications for Diagnostics and Treatment",
-                            "Master the Design of Healthcare Systems",
-                            "Pioneer Sustainable Engineering Solutions for Medical Needs",
-                            "Contribute to Life-Saving Technologies"
-                        ]
-                    },
-                    "medical": {
-                        interests: [
-                            "Surgical Innovations",
-                            "Clinical Research",
-                            "Pharmacology",
-                            "Genomics",
-                            "AI in Diagnostics",
-                            "Telemedicine",
-                            "Epidemiology"
-                        ],
-                        goals: [
-                            "Develop AI Models for Predictive Healthcare",
-                            "Improve Access to Telemedicine",
-                            "Advance Genomic Medicine",
-                            "Design Effective Medical Devices",
-                            "Conduct Breakthrough Clinical Trials",
-                            "Enhance Global Health Solutions",
-                            "Master Advanced Diagnostic Tools"
-                        ]
+                        // Greeting
+                        if (input.toLowerCase() === "hello") {
+                            response = "Hello! How can I assist you today?";
+                        } else if (input.toLowerCase() === "hi") {
+                            response = "Hi there! How's it going?";
+                        } else if (input.toLowerCase() === "hey") {
+                            response = "Hey! What can I help you with?";
+                        }
+
+                        // Career Advice Based on Courses
+                        else if (input.toLowerCase() === "engineering") {
+                            response = "Engineering is a broad field. What stream are you interested in? CSE, ECE, Mechanical, Civil, Electrical, etc.";
+                        } else if (input.toLowerCase() === "medical") {
+                            response = "Medical career requires dedication. Consider pursuing MBBS, BDS, or opt for specializations like cardiology, neurology, etc.";
+                        } else if (input.toLowerCase() === "pharm d") {
+                            response = "Pharmacy (Pharm D) is a great choice with roles in clinical pharmacy, research, and industry. Focus on pharmacology and patient care.";
+                        } else if (input.toLowerCase() === "arts") {
+                            response = "In arts, you can specialize in fields like fine arts, performing arts, literature, and digital media. Building a strong portfolio is key.";
+                        } else if (input.toLowerCase() === "commerce") {
+                            response = "Commerce offers a variety of career paths such as accounting, finance, and marketing. Consider certifications like CA, CPA, or pursuing an MBA.";
+                        } else if (input.toLowerCase() === "law") {
+                            response = "A career in law can be lucrative with specializations like corporate law, intellectual property law, or criminal law. Internships and networking are crucial.";
+                        }
+
+                        // Engineering Specific Streams
+                        else if (input.toLowerCase() === "cse") {
+                            response = "Computer Science Engineering (CSE) is highly in demand. Focus on coding, algorithms, machine learning, AI, and internships in tech companies.";
+                        } else if (input.toLowerCase() === "ece") {
+                            response = "Electronics and Communication Engineering (ECE) offers opportunities in both hardware and software. Specialize in embedded systems, IoT, or telecommunications.";
+                        } else if (input.toLowerCase() === "mechanical") {
+                            response = "Mechanical Engineering is great for roles in manufacturing, automotive, and aerospace. Learn CAD, thermodynamics, and production management.";
+                        } else if (input.toLowerCase() === "civil") {
+                            response = "Civil Engineering offers roles in infrastructure and construction. Focus on structural analysis, design, and project management skills.";
+                        } else if (input.toLowerCase() === "electrical") {
+                            response = "Electrical Engineering opens doors in power systems, automation, and electronics. Master circuit design and renewable energy technologies.";
+                        }
+
+                        // Specific career advice within streams
+                        else if (input.toLowerCase() === "cse jobs") {
+                            response = "For CSE jobs, focus on skills like programming languages (Python, Java, C++), data structures, algorithms, and software development. Internships and project experience are crucial.";
+                        } else if (input.toLowerCase() === "ece jobs") {
+                            response = "ECE jobs include roles in telecommunications, embedded systems, IoT, and VLSI design. Gain experience with hardware programming and design tools.";
+                        } else if (input.toLowerCase() === "mechanical jobs") {
+                            response = "Mechanical Engineering jobs are available in manufacturing, automotive, and aerospace. Skills in CAD, production management, and thermodynamics are beneficial.";
+                        } else if (input.toLowerCase() === "civil jobs") {
+                            response = "Civil Engineering jobs focus on infrastructure projects. Gaining practical experience in project management, structural analysis, and construction will help.";
+                        } else if (input.toLowerCase() === "electrical jobs") {
+                            response = "Electrical Engineering jobs involve roles in power systems, automation, and electronics. Specialize in circuit design, renewable energy, and smart grid technologies.";
+                        }
+
+                        // Advanced Engineering Advice
+                        else if (input.toLowerCase() === "ai jobs") {
+                            response = "AI jobs are high in demand. To excel, work on machine learning algorithms, neural networks, and deep learning. Internships at AI firms can provide hands-on experience.";
+                        } else if (input.toLowerCase() === "robotics") {
+                            response = "Robotics combines mechanical engineering, electrical engineering, and computer science. Focus on automation, control systems, and AI to excel in this field.";
+                        } else if (input.toLowerCase() === "data science") {
+                            response = "Data Science is a booming field. Learn programming (Python, R), machine learning, data visualization, and work with large datasets to secure roles in this domain.";
+                        } else if (input.toLowerCase() === "blockchain") {
+                            response = "Blockchain is a growing field in finance, security, and distributed systems. Learn about smart contracts, cryptography, and decentralized applications.";
+                        } else if (input.toLowerCase() === "cloud computing") {
+                            response = "Cloud Computing is a rapidly growing sector. Learn about AWS, Azure, Google Cloud, and cloud infrastructure management to secure top-paying roles.";
+                        }
+
+                        // Medical Career Details
+                        else if (input.toLowerCase() === "mbbs") {
+                            response = "MBBS is the gateway to becoming a doctor. It involves intensive study of medical sciences and clinical practice. Post-graduation in specialties enhances career prospects.";
+                        } else if (input.toLowerCase() === "dentistry") {
+                            response = "Dentistry involves diagnosing and treating dental conditions. Pursue a BDS degree followed by specializations in orthodontics, periodontics, or oral surgery for better career opportunities.";
+                        } else if (input.toLowerCase() === "nursing") {
+                            response = "Nursing offers roles in hospitals and clinics. With further education, nurses can specialize in fields like pediatric care, anesthetics, or nursing administration.";
+                        }
+
+                        // Pharmacy Career Advice
+                        else if (input.toLowerCase() === "pharmacy jobs") {
+                            response = "Pharmacy offers opportunities in drug manufacturing, clinical research, and patient care. Stay updated with pharmaceutical technologies and regulatory affairs.";
+                        }
+
+                        // Arts Career Advice
+                        else if (input.toLowerCase() === "fine arts") {
+                            response = "Fine arts require creativity and skill. Focus on building a strong portfolio in visual arts, sculpture, or photography to gain recognition in the industry.";
+                        } else if (input.toLowerCase() === "performing arts") {
+                            response = "Performing arts require talent and dedication. Focus on gaining experience through performances, networking, and possibly a degree in music, theater, or dance.";
+                        } else if (input.toLowerCase() === "literature") {
+                            response = "Literature can lead to careers in writing, editing, and publishing. Focus on improving your writing skills, literary analysis, and building a strong portfolio.";
+                        } else if (input.toLowerCase() === "digital media") {
+                            response = "Digital media includes roles in graphic design, video production, and content creation. Build a portfolio, and gain experience with design tools and media platforms.";
+                        }
+
+                        // Law Career Advice
+                        else if (input.toLowerCase() === "corporate law") {
+                            response = "Corporate law deals with legal matters of businesses. Specialize in mergers and acquisitions, intellectual property, and contract law to excel in this field.";
+                        } else if (input.toLowerCase() === "criminal law") {
+                            response = "Criminal law offers exciting opportunities in defense, prosecution, or private practice. Gain experience through internships in law firms or courts.";
+                        } else if (input.toLowerCase() === "intellectual property law") {
+                            response = "Intellectual property law focuses on protecting innovations. Work with patents, copyrights, and trademarks to succeed in this specialized field.";
+                        }
+
+                        // General Study/Preparation Advice
+                        else if (input.toLowerCase() === "study tips") {
+                            response = "Effective study involves time management, active learning, and regular revision. Break tasks into manageable chunks and focus on understanding concepts.";
+                        } else if (input.toLowerCase() === "exam tips") {
+                            response = "For exams, practice past papers, revise key concepts, and stay calm. Time yourself during mock tests to improve speed and accuracy.";
+                        }
+
+                        // Unknown input
+                        else {
+                            response = "Sorry, I didn't quite catch that. Could you please rephrase or ask about something else?";
+                        }
+
+                        return response;
                     }
-                };
 
-                // Create the user's message bubble
-                const userMessageDiv = document.createElement('div');
-                userMessageDiv.className = 'message user';
-                userMessageDiv.textContent = inputField.value;
-                chatMessages.appendChild(userMessageDiv);
+                    // Examples of calling the function with different inputs
+                    chatBotResponse("hello");
+                    chatBotResponse("engineering");
+                    chatBotResponse("cse jobs");
+                    chatBotResponse("medical");
+                    chatBotResponse("robotics");
+                    chatBotResponse("study tips");
+                    chatBotResponse("pharmacy jobs");
+                    chatBotResponse("law");
+                    chatBotResponse("fine arts");
 
-                // AI "typing" indicator
-                const typingIndicator = document.createElement('div');
-                typingIndicator.className = 'message ai typing';
-                typingIndicator.textContent = "AI is typing...";
-                chatMessages.appendChild(typingIndicator);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
+                    function simulateAI() {
+                        const inputField = document.querySelector('input[name="message"]');
+                        const chatMessages = document.getElementById('chat-messages');
+                        const message = inputField.value.trim().toLowerCase();
 
-                // Simulate AI response after delay
-                setTimeout(() => {
-                    // Remove typing indicator
-                    typingIndicator.remove();
+                        // Predefined responses
 
-                    let responseMessage;
-                    if (responses[message]) {
-                        const response = responses[message];
-                        responseMessage = `
-                            <strong>Interests:</strong>
-                            <ul>${response.interests.map(item => `<li>${item}</li>`).join('')}</ul>
-                            <strong>Goals:</strong>
-                            <ul>${response.goals.map(item => `<li>${item}</li>`).join('')}</ul>
-                        `;
-                    } else {
-                        responseMessage = `
+                        // Create the user's message bubble
+                        const userMessageDiv = document.createElement('div');
+                        userMessageDiv.className = 'message user';
+                        userMessageDiv.textContent = inputField.value;
+                        chatMessages.appendChild(userMessageDiv);
+
+                        // AI "typing" indicator
+                        const typingIndicator = document.createElement('div');
+                        typingIndicator.className = 'message ai typing';
+                        typingIndicator.textContent = "AI is typing...";
+                        chatMessages.appendChild(typingIndicator);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                        // Simulate AI response after delay
+                        setTimeout(() => {
+                            // Remove typing indicator
+                            typingIndicator.remove();
+
+                            let responseMessage;
+                            if (chatBotResponse((message))) {
+                                const response = chatBotResponse(message);
+                                responseMessage = `<strong>${response}:</strong>`;
+                            } else {
+                                responseMessage = `
                             I'm not sure about "${message}". Here are some examples:
                             <ul>
                                 <li>Try typing "engineering"</li>
                                 <li>Or type "medical"</li>
                             </ul>
                         `;
+                            }
+
+                            // Create AI's response bubble
+                            const aiMessageDiv = document.createElement('div');
+                            aiMessageDiv.className = 'message ai';
+                            aiMessageDiv.innerHTML = responseMessage;
+                            chatMessages.appendChild(aiMessageDiv);
+
+                            // Scroll to the bottom of the chat
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }, 1000); // Simulate delay
+
+                        // Clear the input field
+                        inputField.value = "";
+
+                        return false; // Prevent form submission
                     }
+                </script>
 
-                    // Create AI's response bubble
-                    const aiMessageDiv = document.createElement('div');
-                    aiMessageDiv.className = 'message ai';
-                    aiMessageDiv.innerHTML = responseMessage;
-                    chatMessages.appendChild(aiMessageDiv);
+                <form method="POST" action="" onsubmit="return simulateAI()">
+                    {% csrf_token %}
+                    <input type="text" name="message" placeholder="Type your field (e.g., engineering, medical)..."
+                           required>
+                    <button type="submit" class="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
 
-                    // Scroll to the bottom of the chat
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 1000); // Simulate delay
-
-                // Clear the input field
-                inputField.value = "";
-
-                return false; // Prevent form submission
+        <style>
+            .chat-body {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
             }
-        </script>
 
-        <form method="POST" action="" onsubmit="return simulateAI()">
-            {% csrf_token %}
-            <input type="text" name="message" placeholder="Type your field (e.g., engineering, medical)..." required>
-            <button type="submit" class="send-btn">
-                <i class="fa-solid fa-paper-plane"></i>
-            </button>
-        </form>
-    </div>
-</div>
+            .chat-messages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 10px;
+                background-color: #f4f4f4;
+            }
 
-<style>
-    .chat-body {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    .chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 10px;
-        background-color: #f4f4f4;
-    }
-    .chat-footer {
-        padding: 10px;
-        background-color: #fff;
-        border-top: 1px solid #ddd;
-    }
-    .message {
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-        max-width: 80%;
-    }
-    .message.user {
-        background-color: #d1e7dd;
-        align-self: flex-end;
-    }
-    .message.ai {
-        background-color: #f8d7da;
-        align-self: flex-start;
-    }
-    .message.typing {
-        font-style: italic;
-        background-color: #eee;
-    }
-    ul {
-        margin: 0;
-        padding-left: 20px;
-    }
-</style>
+            .chat-footer {
+                padding: 10px;
+                background-color: #fff;
+                border-top: 1px solid #ddd;
+            }
+
+            .message {
+                margin: 5px 0;
+                padding: 10px;
+                border-radius: 5px;
+                max-width: 80%;
+            }
+
+            .message.user {
+                background-color: #d1e7dd;
+                align-self: flex-end;
+            }
+
+            .message.ai {
+                background-color: #f8d7da;
+                align-self: flex-start;
+            }
+
+            .message.typing {
+                font-style: italic;
+                background-color: #eee;
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+        </style>
 
     </div>
 </div>

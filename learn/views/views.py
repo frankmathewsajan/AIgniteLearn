@@ -5,11 +5,33 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 from learn.forms import ProfileForm
-from learn.models import Profile
+from learn.models import Profile, CodingQuestion
 
 
 def compiler(request):
-    return render(request, 'learn/compiler/compiler.html')
+    # Retrieve all IDs of objects in CodingQuestion
+    question_ids = list(CodingQuestion.objects.values_list('id', flat=True))
+
+    # Render the template and pass the IDs as context
+    return render(request, 'learn/compiler/compiler.html', {
+        'ids': question_ids
+    })
+
+
+def get_coding_question(request, question_id):
+    try:
+        question = CodingQuestion.objects.get(id=question_id)
+        data = {
+            'title': question.title,
+            'description': question.description,
+            'difficulty': question.difficulty,
+            'constraints': question.constraints,
+            'example_input': question.example_input,
+            'example_output': question.example_output
+        }
+        return JsonResponse(data, safe=False)
+    except CodingQuestion.DoesNotExist:
+        return JsonResponse({'error': 'Question not found'}, status=404)
 
 
 def index(request):
@@ -21,6 +43,10 @@ def index(request):
 
 def features(request):
     return render(request, "learn/features.html")
+
+
+def leaderboard(request):
+    return render(request, "learn/leaderboard.html")
 
 
 def perks(request):

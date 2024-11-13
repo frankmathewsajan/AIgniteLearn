@@ -157,10 +157,12 @@
     <div class="container" id="quiz-container" style="display:none;">
         <div class="question" id="question"></div>
         <div class="timer" id="timer">Time: 10</div>
-        <div class="input-group">
-            <input type="number" id="answer" placeholder="Your answer" required>
-            <button class="button" onclick="checkAnswer()">Submit</button>
+        <form action="#" onsubmit="checkAnswer();return false">
+            <div class="input-group">
+            <input type="number" id="answer" placeholder="Your answer" aria-label="" required>
+            <button class="button" type="submit">Submit</button>
         </div>
+        </form>
         <div class="feedback" id="feedback"></div>
     </div>
 
@@ -206,7 +208,7 @@
             }
             correctAnswer = eval(num1 + operator + num2);
             correctAnswer = Math.round(correctAnswer);
-            document.getElementById('question').innerText = What is ${num1} ${operator} ${num2}?;
+            document.getElementById('question').innerText = `What is ${num1} ${operator} ${num2}?`;
             document.getElementById('feedback').innerText = '';
         }
 

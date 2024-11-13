@@ -111,6 +111,13 @@
             box-shadow: 0 0 5px #6C7B8B;
         }
 
+        #questionDifficulty {
+            padding: 0.4em 0.6em;
+            border-radius: 0.5em;
+            font-weight: bold;
+        }
+
+
         .output-box {
             background-color: #E4F1F1;
             padding: 20px;
@@ -209,10 +216,60 @@
 
 <div class="container">
     <!-- Question Section -->
-    <div class="question-box">
-        <h4>Example Question:</h4>
-        <p>Write a Python program that checks whether a number is even or odd.</p>
+    <div class="question-box" id="questionBox">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4 id="questionTitle">Loading...</h4>
+            <span class="badge bg-primary" id="questionDifficulty" style="font-size: 0.9rem;">Difficulty</span>
+        </div>
+        <p id="questionDescription"></p>
+        <button id="nextQuestionBtn" class="btn btn-outline-dark mt-2 w-25 float-end">Next Question</button>
     </div>
+    <script>
+        const q_array_id = JSON.parse('{{ ids }}');
+        const randomId = q_array_id[Math.floor(Math.random() * q_array_id.length)];
+
+        // Fetch a question dynamically
+        function loadQuestion(questionId) {
+            fetch(`/get_question/${questionId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("questionTitle").textContent = data.title;
+                    document.getElementById("questionDescription").textContent = data.description;
+                    document.getElementById("questionDifficulty").textContent = data.difficulty;
+                    document.getElementById("questionDifficulty").className =
+                        `badge ${getDifficultyClass(data.difficulty)}`;
+                })
+                .catch(err => {
+                    console.error("Error fetching question:", err);
+                    document.getElementById("questionTitle").textContent = "Error loading question";
+                });
+        }
+
+        // Helper function to get the appropriate badge color class based on difficulty
+        function getDifficultyClass(difficulty) {
+            switch (difficulty.toLowerCase()) {
+                case "easy":
+                    return "bg-success";
+                case "medium":
+                    return "bg-warning";
+                case "hard":
+                    return "bg-danger";
+                default:
+                    return "bg-secondary";
+            }
+        }
+
+        // Event listener for "Next Question" button
+        document.getElementById("nextQuestionBtn").onclick = function () {
+            const randomId = q_array_id[Math.floor(Math.random() * q_array_id.length)];
+            loadQuestion(randomId);
+        };
+
+
+        // Example usage
+        loadQuestion(randomId); // Load question with ID 1
+
+    </script>
 
     <!-- CodeMirror Editor -->
     <div class="form-group">
@@ -256,19 +313,16 @@
         const language = document.getElementById("language").value;
         const user_input = document.getElementById("userInput").value;
         console.log(code, language);
-        runCode(code, language,user_input);
+        runCode(code, language, user_input);
     };
 
-    function runCode(code, language,user_input) {
+    function runCode(code, language, user_input) {
         const output = document.getElementById("output");
         const error = document.getElementById("error");
 
         error.style.display = 'none';
-
-        // Show loading indication
         output.innerHTML = "Running code...";
 
-        // Send code to the backend via AJAX
         fetch('/execute/', {
             method: 'POST',
             headers: {
@@ -287,12 +341,37 @@
                     output.innerHTML = "Error: " + data.error;
                 } else {
                     output.innerHTML = data.output;
+
+                    // Save the submission
+                    saveSubmission(code, language, data.output);
                 }
             })
             .catch(err => {
                 output.innerHTML = "Error: " + err.message;
                 error.innerHTML = "Something went wrong!";
                 error.style.display = 'block';
+            });
+    }
+
+    function saveSubmission(code, language, output) {
+        fetch('/save_submission/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: JSON.stringify({
+                code: code,
+                language: language,
+                output: output
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Submission saved:", data);
+            })
+            .catch(err => {
+                console.error("Error saving submission:", err);
             });
     }
 </script>

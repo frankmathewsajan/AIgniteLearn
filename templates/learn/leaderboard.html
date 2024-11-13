@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .leaderboard-container {
+      width: 80%;
+      max-width: 1200px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .leaderboard-tabs {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      background: #3A3A3A;
+      color: #fff;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .tab:hover {
+      background: #6a0dad;
+    }
+
+    .tab.active {
+      background: #ff7f50;
+      color: #fff;
+    }
+
+    .leaderboard-content {
+      display: none;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .leaderboard-content.active {
+      display: block;
+    }
+
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .leaderboard-table th, .leaderboard-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s ease;
+    }
+
+    .leaderboard-table th {
+      background: #3A3A3A;
+      color: white;
+    }
+
+    .leaderboard-table tr:hover {
+      background: #f1f1f1;
+    }
+
+    .leaderboard-table .rank {
+      color: #ff7f50;
+      font-weight: bold;
+    }
+
+    .leaderboard-table .college {
+      color: #4682b4;
+    }
+
+    .leaderboard-table .state {
+      color: #32cd32;
+    }
+
+    .leaderboard-table .nation {
+      color: #ff6347;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Leaderboard Showcase</h1>
+  <div class="leaderboard-container">
+    <div class="leaderboard-tabs">
+      <div class="tab active" onclick="showLeaderboard('state')">State</div>
+      <div class="tab" onclick="showLeaderboard('college')">College</div>
+      <div class="tab" onclick="showLeaderboard('nation')">Nation</div>
+    </div>
+
+    <!-- Statewise Leaderboard -->
+    <div id="state-leaderboard" class="leaderboard-content active">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Student</th>
+            <th>College</th>
+            <th>State</th>
+            <th>Perks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank">1</td>
+            <td>Ravi Kumar</td>
+            <td class="college">IIT Bombay</td>
+            <td class="state">Maharashtra</td>
+            <td>₹25,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">2</td>
+            <td>Priya Sharma</td>
+            <td class="college">IISc Bangalore</td>
+            <td class="state">Karnataka</td>
+            <td>₹20,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">3</td>
+            <td>Amit Patel</td>
+            <td class="college">BITS Pilani</td>
+            <td class="state">Rajasthan</td>
+            <td>₹22,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">4</td>
+            <td>Neha Singh</td>
+            <td class="college">IIT Delhi</td>
+            <td class="state">Delhi</td>
+            <td>₹24,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">5</td>
+            <td>Raghav Desai</td>
+            <td class="college">NIT Trichy</td>
+            <td class="state">Tamil Nadu</td>
+            <td>₹21,00,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- College Leaderboard -->
+    <div id="college-leaderboard" class="leaderboard-content">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Student</th>
+            <th>College</th>
+            <th>Nation</th>
+            <th>Perks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank">1</td>
+            <td>Aarti Yadav</td>
+            <td class="college">IIT Bombay</td>
+            <td class="nation">India</td>
+            <td>₹30,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">2</td>
+            <td>Vikram Agarwal</td>
+            <td class="college">IISc Bangalore</td>
+            <td class="nation">India</td>
+            <td>₹28,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">3</td>
+            <td>Ananya Gupta</td>
+            <td class="college">BITS Pilani</td>
+            <td class="nation">India</td>
+            <td>₹25,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">4</td>
+            <td>Ravi Reddy</td>
+            <td class="college">IIT Delhi</td>
+            <td class="nation">India</td>
+            <td>₹26,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">5</td>
+            <td>Simran Kaur</td>
+            <td class="college">NIT Trichy</td>
+            <td class="nation">India</td>
+            <td>₹27,00,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Nationwise Leaderboard -->
+    <div id="nation-leaderboard" class="leaderboard-content">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Student</th>
+            <th>State</th>
+            <th>Nation</th>
+            <th>Perks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank">1</td>
+            <td>Vikash Ranjan</td>
+            <td class="state">Maharashtra</td>
+            <td class="nation">India</td>
+            <td>₹30,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">2</td>
+            <td>Jaya Mishra</td>
+            <td class="state">Karnataka</td>
+            <td class="nation">India</td>
+            <td>₹27,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">3</td>
+            <td>Shivani Verma</td>
+            <td class="state">Delhi</td>
+            <td class="nation">India</td>
+            <td>₹26,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">4</td>
+            <td>Aryan Sharma</td>
+            <td class="state">Rajasthan</td>
+            <td class="nation">India</td>
+            <td>₹28,00,000</td>
+          </tr>
+          <tr>
+            <td class="rank">5</td>
+            <td>Siddhi Chauhan</td>
+            <td class="state">Tamil Nadu</td>
+            <td class="nation">India</td>
+            <td>₹25,00,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showLeaderboard(id) {
+      // Remove active class from all tabs
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Remove active class from all content divs
+      const contents = document.querySelectorAll('.leaderboard-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Add active class to clicked tab
+      document.querySelector(`.tab[onclick="showLeaderboard('${id}')"]`).classList.add('active');
+
+      // Show the corresponding content
+      document.getElementById(`${id}-leaderboard`).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

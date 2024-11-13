@@ -22,6 +22,7 @@ urlpatterns = [
     # Profile and setup paths
     path('profile/', views.profile, name='profile'),
     path('setup', views.setup, name='setup'),
+path('leaderboard', views.leaderboard, name='leaderboard'),
 
     # Course-related paths
     path('courses/<str:lesson>', courses.courses, name='courses'),
@@ -33,4 +34,5 @@ urlpatterns = [
     # Compiler and analysis paths
     path('coding', views.compiler, name='coding'),
     path('execute/', execute_code, name='execute_code'),
+    path('get_question/<int:question_id>/', views.get_coding_question, name='get_question'),
 ]
